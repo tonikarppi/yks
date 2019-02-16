@@ -12,5 +12,6 @@ dist:
 test:
 	python setup.py test
 	coverage report --fail-under 70
+	pre-commit run --all-files
 
 .PHONY: install develop dist test
