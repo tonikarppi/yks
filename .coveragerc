@@ -1,0 +1,8 @@
+[run]
+branch = True
+include = yks.py
+
+[report]
+exclude_lines =
+  pragma: no cover
+  def console_run()
