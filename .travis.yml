@@ -25,7 +25,7 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - make force-publish
+          - make publish
         on:
           tags: true
           branch: master
