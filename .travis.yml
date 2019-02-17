@@ -7,8 +7,6 @@ python:
   - 'pypy3.5'
 cache:
   pip: true
-  directories:
-    - '$HOME/.cache/pre-commit'
 install:
   - pip install -r test_requirements.txt
   - pip install twine wheel
