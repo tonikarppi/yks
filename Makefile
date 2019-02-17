@@ -10,8 +10,10 @@ dist:
 	python setup.py sdist bdist_wheel
 
 test:
-	python setup.py test
+	pytest
 	coverage report --fail-under 70
+
+check:
 	pre-commit run --files *.py
 
 .PHONY: install develop dist test
