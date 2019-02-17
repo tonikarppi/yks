@@ -8,7 +8,7 @@ cache:
     - '$HOME/.cache/pre-commit'
 install:
   - pip install -r test_requirements.txt
-  - pip install twine
+  - pip install twine wheel
 jobs:
   include:
     - script: make test
