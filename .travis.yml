@@ -8,5 +8,7 @@ cache:
     - '$HOME/.cache/pre-commit'
 install:
   - pip install -r test_requirements.txt
-script:
-  - make test
+jobs:
+  include:
+    - script: make test
+    - script: make check
