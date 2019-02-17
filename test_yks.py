@@ -78,7 +78,7 @@ def test_max_in(values, expected):
             (False, "Expected: yks <add|subtract|multiply|divide> <num1> <num2>."),
         ),
         (
-            ("multiply", "6", "a"),  # Invalid operand 1
+            ("multiply", "6", "a"),  # Invalid operand 2
             (False, "Expected: yks <add|subtract|multiply|divide> <num1> <num2>."),
         ),
         (
