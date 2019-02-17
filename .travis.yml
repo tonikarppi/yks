@@ -1,0 +1,12 @@
+language: python
+dist: xenial
+python:
+  - '3.7'
+cache:
+  pip: true
+  directories:
+    - '$HOME/.cache/pre-commit'
+install:
+  - pip install -r test_requirements.txt
+script:
+  - make test
