@@ -17,8 +17,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    setup_requires=["pytest-runner"],
-    tests_require=["pytest", "pytest-cov", "coverage", "pre-commit"],
     keywords="sample",
     python_requires=">=3.5",
     entry_points={"console_scripts": ["yks=yks:console_run"]},
