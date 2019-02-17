@@ -8,6 +8,7 @@ setup(
     name="yks",
     version="0.0.2",
     description="A sample project",
+    url="https://github.com/tonikarppi/yks",
     long_description=readme,
     long_description_content_type="text/markdown",
     author="Toni Karppi",
