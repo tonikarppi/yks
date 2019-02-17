@@ -8,25 +8,21 @@ python:
 
 install:
   - pip install -r test_requirements.txt
+  - pip install twine wheel
 
 script:
   - make test
   - make check
 
-jobs:
-  include:
-    - stage: deploy
-      python: '3.7'
-      deploy:
-        provider: script
-        install:
-          - pip install twine wheel
-        script:
-          - make dist
-          - make publish
-        on:
-          tags: true
-          branch: master
+deploy:
+  provider: script
+  script:
+    - make dist
+    - make publish
+  on:
+    python: '3.7'
+    tags: true
+    branch: master
 
 cache:
   pip: true
