@@ -19,7 +19,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     keywords="sample",
-    python_requires=">=3.5",
+    python_requires=">=3.6",
     entry_points={"console_scripts": ["yks=yks:console_run"]},
     py_modules=["yks"],
 )
