@@ -9,12 +9,14 @@ cache:
 install:
   - pip install -r test_requirements.txt
   - pip install twine wheel
-jobs:
-  include:
-    - script: make test
-    - script: make check
-    - stage: deploy
-      # if: branch = master AND tag IS present
-      script:
-        - make dist
-        - make publish
+script:
+  - make test
+  - make check
+  - make dist
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: make publish
+  on:
+    tags: true
+    branch: master
