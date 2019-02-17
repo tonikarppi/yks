@@ -2,15 +2,16 @@ language: python
 
 dist: xenial
 
-python:
-  - '3.6'
-  - '3.7'
-
 jobs:
   include:
     - stage: test
       install:
         - pip install -r test_requirements.txt
+    - python: '3.6'
+      script:
+        - make test
+        - make check
+    - python: '3.7'
       script:
         - make test
         - make check
@@ -21,8 +22,8 @@ jobs:
       deploy:
         provider: script
         script:
-          - make publish
           - make dist
+          - make publish
         on:
           tags: true
           branch: master
