@@ -3,10 +3,15 @@ dist: xenial
 
 jobs:
   include:
-    - stage: test
-      python:
-        - 3.6
-        - 3.7
+    - stage: test 3.6
+      python: 3.6
+      install:
+        - pip install -r test_requirements.txt
+      script:
+        - make test
+        - make check
+    - stage: test 3.7
+      python: 3.7
       install:
         - pip install -r test_requirements.txt
       script:
@@ -16,12 +21,11 @@ jobs:
       python: 3.7
       install:
         - pip install twine wheel
-      script:
-        - make dist
       deploy:
         provider: script
-        skip_cleanup: true
-        script: make publish
+        script:
+          - make publish
+          - make dist
         on:
           tags: true
           branch: master
