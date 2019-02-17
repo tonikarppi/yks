@@ -1,6 +1,6 @@
 # Yks
 
-### An experiment on setting up a Python project.
+### An experiment on setting up a Python project
 
 [![Build Status](https://travis-ci.com/tonikarppi/yks.svg?branch=master)](https://travis-ci.com/tonikarppi/yks)
 
