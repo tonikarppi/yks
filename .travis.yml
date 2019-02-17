@@ -8,7 +8,13 @@ cache:
     - '$HOME/.cache/pre-commit'
 install:
   - pip install -r test_requirements.txt
+  - pip install twine
 jobs:
   include:
     - script: make test
     - script: make check
+    - stage: deploy
+      if: branch = master AND tag IS present
+      script:
+        - make dist
+        - make publish
