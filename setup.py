@@ -6,7 +6,7 @@ with open("README.md", encoding="utf8") as f:
 
 setup(
     name="yks",
-    version="0.0.3",
+    version="0.0.4",
     description="A sample project",
     url="https://github.com/tonikarppi/yks",
     long_description=readme,
