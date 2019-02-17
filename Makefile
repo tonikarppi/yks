@@ -19,4 +19,4 @@ check:
 publish:
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
-.PHONY: install develop dist test publish
+.PHONY: install develop dist test check publish
