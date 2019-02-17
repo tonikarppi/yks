@@ -5,8 +5,8 @@ python:
   - '3.6'
   - '3.7'
   - 'pypy3.5'
-cache:
-  pip: true
+# cache:
+# pip: true
 install:
   - pip install -r test_requirements.txt
   - pip install twine wheel
