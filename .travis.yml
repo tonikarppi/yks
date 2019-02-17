@@ -19,11 +19,12 @@ jobs:
       python: '3.7'
       install:
         - pip install twine wheel
-      script: skip
+      script:
+        - make dist
       deploy:
         provider: script
+        skip_cleanup: true
         script:
-          - make dist
           - make publish
         on:
           tags: true
