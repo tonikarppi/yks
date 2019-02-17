@@ -3,8 +3,10 @@ dist: xenial
 python:
   - '3.6'
   - '3.7'
-# cache:
-# pip: true
+cache:
+  pip: true
+  directories:
+    - $HOME/.cache/pre-commit
 install:
   - pip install -r test_requirements.txt
   - pip install twine wheel
