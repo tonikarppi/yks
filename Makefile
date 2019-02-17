@@ -16,4 +16,7 @@ test:
 check:
 	pre-commit run --files *.py
 
-.PHONY: install develop dist test
+publish:
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+.PHONY: install develop dist test publish
